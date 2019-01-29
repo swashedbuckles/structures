@@ -2,27 +2,29 @@
 
 /** 
  * @class
+ * @property {any} value
+ * @property {Node} next
  */
 function Node(value) {
-  /** @property {any} value */
-  this.value = value;
+  this.value = value instanceof Node 
+    ? value.value
+    : value;
   
-  /** @property {Node} next */
   this.next  = null;
 }
 
 /** 
  * @class 
+ * @property {Node} head
+ * @property {Node} tail
  */
 function List() {
-  /** @property {Node} head */
   this.head = null;
-  
-  /** @property {Node} tail */
   this.tail = null;
 }
 
 /**
+ * determine if list is empty;
  * @return {boolean}
  */
 List.prototype.isEmpty = function() {
@@ -30,6 +32,7 @@ List.prototype.isEmpty = function() {
 }
 
 /**
+ * add a new node at the end of the list.
  * @param  {any} value
  * @return {List}
  */
@@ -45,7 +48,19 @@ List.prototype.add = function(value) {
   return this;
 }
 
+/**
+ * add a new node to the head of the list.
+ * @param  {any} value
+ * @return {List}
+ */
+List.prototype.addHead = function(value) {
+  var node = new Node(value);
+  addhead(this, node);
+  return this;
+}
+
 /** 
+ * find any node in the list.
  * @param {any} value
  * @return {Node|null}
  */
@@ -56,6 +71,19 @@ List.prototype.find = function(value) {
 }
 
 /**
+ * remove the head of the list.
+ * @return {List}
+ */
+List.prototype.removeHead = function() {
+  this.head = this.head.next;
+  if(this.head == null) {
+    this.tail == null;
+  }
+  return this;
+}
+
+/**
+ * remove any node from the list.
  * @param {any} value
  * @return {List}
  */
@@ -64,6 +92,67 @@ List.prototype.remove = function(value) {
     return this;
   }
   var nodes = findSet(this.head, value);
+  
+  if(nodes.length === 1) {
+    return this.removeHead;
+  }
+
+  var antecedent = nodes[0];
+  var element = nodes[1]
+  var subsequent = element.next;
+
+  antecedent.next = subsequent.next;
+
+  return this;
+}
+
+/**
+ * call a function with every value in the list.
+ * @param {function} fn
+ * @return {List}
+ */
+List.prototype.each = function(fn) {
+  each(this.head, fn);
+  return this;
+}
+
+/**
+ * create a new list from the results of a function
+ * @param {function} fn
+ * @return {List}
+ */
+List.prototype.map = function(fn) {
+  var list = new List();
+  if(this.head == null) {
+    return list;
+  }
+
+  return map(acc, this.head, fn);
+}
+
+/**
+ * @param {List} acc accumulator (new list)
+ * @param {Node} start node
+ * @param {function} fn 
+ * @return {List}
+ */
+function map(acc, start, fn) {
+  if(start == null) {
+    return acc;
+  }
+  var node = new Node(fn(start));
+
+  return map(acc, start.next, fn);
+}
+
+function each(start, fn) {
+  if(start == null) {
+    return;
+  }
+
+  fn(start.value);
+  
+  return each(start.next, fn);
 }
 
 /**
