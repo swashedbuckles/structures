@@ -1,0 +1,9 @@
+{
+  "include": ["lib/*.js"],
+  "exclude": [
+    "lib.dom.d.ts",
+    "node_modules"
+  ],
+  "compilerOptions": {
+  }
+}
