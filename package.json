@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "ava *.spec.js",
-    "watch": "ava *.spec.js --watch"
+    "test": "ava lib/*.spec.js",
+    "watch": "ava lib/*.spec.js --watch"
   },
   "author": "Tom Joseph",
   "license": "ISC",
