@@ -37,6 +37,7 @@ describe('Stacks', it => {
     samples.forEach(x => s.push(x));
     t.is(s.pop(), 'c');
     t.is(s.pop(), 'b');
+    t.is(s.peek(), 'a');
     t.is(s.pop(), 'a');
     t.true(s.isEmpty());
   });

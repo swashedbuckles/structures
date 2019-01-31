@@ -7,7 +7,10 @@ function Stack (values) {
   /** 
    * @property {Array} _values 
    */
-  this._values = [].concat(values);  
+  this._values = [];
+  if(values) {
+    this.values.concat(values);
+  }
 }
 
 /**
@@ -23,7 +26,9 @@ Stack.prototype.push = function push(value){
  * @return {any}
  */
 Stack.prototype.pop = function pop() {
-  return this._values.pop();
+  if(!this.isEmpty()) {
+    return this._values.pop();
+  }
 }
 
 /**
@@ -31,7 +36,7 @@ Stack.prototype.pop = function pop() {
  * @return {boolean}
  */
 Stack.prototype.isEmpty = function isEmpty() {
-    return this._values.length > 0;
+    return this._values.length === 0;
 }
 
 /**
@@ -40,7 +45,8 @@ Stack.prototype.isEmpty = function isEmpty() {
  */
 Stack.prototype.peek = function() {
   if(!this.isEmpty()) {
-    return this._values[0];
+    const last = this._values.length - 1;
+    return this._values[last];
   }
 }
 
