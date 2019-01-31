@@ -7,7 +7,7 @@ function Stack (values) {
   /** 
    * @property {Array} _values 
    */
-  this._values = values;  
+  this._values = [].concat(values);  
 }
 
 /**
@@ -23,9 +23,7 @@ Stack.prototype.push = function push(value){
  * @return {any}
  */
 Stack.prototype.pop = function pop() {
-  if(!this.isEmpty()) {
-    return this._values.pop();
-  }
+  return this._values.pop();
 }
 
 /**
@@ -45,3 +43,5 @@ Stack.prototype.peek = function() {
     return this._values[0];
   }
 }
+
+module.exports = Stack;

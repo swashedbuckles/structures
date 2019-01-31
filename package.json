@@ -4,8 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava *.spec.js",
+    "watch": "ava *.spec.js --watch"
   },
   "author": "Tom Joseph",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^1.2.0",
+    "ava-spec": "^1.1.1"
+  }
 }
