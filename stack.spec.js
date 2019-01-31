@@ -30,7 +30,7 @@ describe('Stacks', it => {
     t.is(typeof s.peek, 'function')
   });
 
-  it('should be FIFO', t => {
+  it('should be FILO', t => {
     const samples = ['a', 'b', 'c'];
     const s = new Stack();
 

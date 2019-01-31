@@ -1,13 +1,14 @@
 // @ts-check
 /**
  * @class
- * @param {any[]} values initial values of the queue
+ * @param {any[]} [values] initial values of the queue
+ * @property {Array} _values
  */
 function Queue (values) {
-  /** 
-   * @property {Array} _values 
-   */
-  this._values = values;  
+  this._values = [];
+  if(values) {
+    this._values = this._values.concat(values);  
+  }
 }
 
 /**
@@ -33,7 +34,7 @@ Queue.prototype.dequeue = function dequeue() {
  * @return {boolean}
  */
 Queue.prototype.isEmpty = function isEmpty() {
-    return this._values.length > 0;
+    return this._values.length === 0;
 }
 
 /**
@@ -45,3 +46,5 @@ Queue.prototype.peek = function() {
     return this._values[this._values.length - 1];
   }
 }
+
+module.exports = Queue;

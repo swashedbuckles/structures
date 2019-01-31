@@ -9,7 +9,7 @@ function Stack (values) {
    */
   this._values = [];
   if(values) {
-    this.values.concat(values);
+    this._values = this._values.concat(values);  
   }
 }
 
