@@ -6,7 +6,8 @@
   "scripts": {
     "test": "ava tests/*.js",
     "testfile": "ava",
-    "watch": "ava tests/*.js --watch"
+    "watch": "ava tests/*.js --watch",
+    "tree": "node -r esm tree.js"
   },
   "author": "Tom Joseph",
   "license": "ISC",
