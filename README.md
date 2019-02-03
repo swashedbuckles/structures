@@ -53,6 +53,7 @@ Trying to implement them kinda functional-like and stuff. You know, for learnin'
   * [Trees](https://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm)
   * [Binary Tree](https://www.geeksforgeeks.org/binary-tree-data-structure/)
   * [Applications of Trees](https://www.geeksforgeeks.org/applications-of-tree-data-structure/)
+  * [CS in JS: BST](https://humanwhocodes.com/blog/2009/06/16/computer-science-in-javascript-binary-search-tree-part-2/)
 * Graph
   * [Graph in JS](https://www.geeksforgeeks.org/implementation-graph-javascript/)
   * [Digraphe](https://github.com/HQarroum/directed-graph)
