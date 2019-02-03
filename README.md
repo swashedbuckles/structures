@@ -27,6 +27,8 @@ Trying to implement them kinda functional-like and stuff. You know, for learnin'
   * [ ] `find`
   * [ ] `some`
   * [ ] `every`
+* [ ] optimize delete for bst
+* [ ] [merge sort for linked list](https://www.geeksforgeeks.org/merge-sort-linked-lists-javascript/) 
 * [x] move tests into own directory (separate so implementation can be blanked for TDD exercises)
 * [ ] cleanup tests
 * [ ] READMEs for each data structure
@@ -38,8 +40,11 @@ Trying to implement them kinda functional-like and stuff. You know, for learnin'
   * [Iterable Data Structures](https://medium.com/smelly-code/data-structures-with-iterable-protocol-3f506c9547e4)
   * [Uses of WeakMap](https://stackoverflow.com/questions/29413222/what-are-the-actual-uses-of-es6-weakmap)
 * Stack
+  * [stack in js](https://www.geeksforgeeks.org/implementation-stack-javascript/)
 * Queue
   * [Priority Queue (Wiki)](https://en.wikipedia.org/wiki/Priority_queue)
+  * [Priority Queue in JS](https://www.geeksforgeeks.org/implementation-priority-queue-javascript/)
+  * [Queue in JS](https://www.geeksforgeeks.org/implementation-queue-javascript/)
 * Linked List
   * [Codeburst: Linked List](https://codeburst.io/js-data-structures-linked-list-3ed4d63e6571)
 * Tree
@@ -49,3 +54,5 @@ Trying to implement them kinda functional-like and stuff. You know, for learnin'
   * [Binary Tree](https://www.geeksforgeeks.org/binary-tree-data-structure/)
   * [Applications of Trees](https://www.geeksforgeeks.org/applications-of-tree-data-structure/)
 * Graph
+  * [Graph in JS](https://www.geeksforgeeks.org/implementation-graph-javascript/)
+  * [Digraphe](https://github.com/HQarroum/directed-graph)

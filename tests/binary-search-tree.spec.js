@@ -145,7 +145,7 @@ describe('Binary Search Tree', it => {
       const b = createTree(values);
       
       b.remove(50);
-      
+
       const zero = b.getLevel(0);
       const one  = b.getLevel(1);
       const two  = b.getLevel(2);
@@ -211,10 +211,11 @@ describe('Binary Search Tree', it => {
           correct: [[50], [30, 70], [20, 40, 100]]
         }, 
       ];
-
+      // tests.length = 1;
       tests.forEach(x => {
         const {tree, correct} = x;
         tree.remove(x.remove);
+        
         correct.forEach((values, index) => {
           const level = tree.getLevel(index);
           t.deepEqual(level, values, `Removed ${x.remove}; Level ${index} is incorrect`);
