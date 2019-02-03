@@ -5,6 +5,7 @@
 * Stack
 * Queue
 * (linked) List
+* Binary Search Tree
 
 Trying to implement them kinda functional-like and stuff. You know, for learnin'.
 
