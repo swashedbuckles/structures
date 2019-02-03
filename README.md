@@ -16,7 +16,7 @@ Trying to implement them kinda functional-like and stuff. You know, for learnin'
 * [ ] balanced binary search tree
 * [ ] directed graph
 * [ ] binary decision diagram
-* [ ] priority queue
+* [x] priority queue
 * [ ] sets (maybe to js specification)
 * [ ] maps (maybe to js specification)
 * [ ] implement standard js array function in all data structures
