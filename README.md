@@ -27,7 +27,8 @@ Trying to implement them kinda functional-like and stuff. You know, for learnin'
   * [ ] `find`
   * [ ] `some`
   * [ ] `every`
-* [ ] cleanup spec files, move into own directory (separate so implementation can be blanked for TDD exercises)
+* [x] move tests into own directory (separate so implementation can be blanked for TDD exercises)
+* [ ] cleanup tests
 * [ ] READMEs for each data structure
 
 ## Research

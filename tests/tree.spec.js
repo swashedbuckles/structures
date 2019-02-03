@@ -1,5 +1,5 @@
-import {test, describe} from 'ava-spec';
-import Tree from './tree';
+import {describe} from 'ava-spec';
+import Tree from '../lib/tree';
 
 describe('Trees', it => {
   it.todo('is a constructor');

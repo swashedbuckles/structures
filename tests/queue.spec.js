@@ -1,5 +1,5 @@
-import {test, describe} from 'ava-spec';
-import Queue from './queue';
+import {describe} from 'ava-spec';
+import Queue from '../lib/queue';
 describe('Queues', it => {
   it('should be a constructor', t => {
     t.is(typeof Queue, 'function');
