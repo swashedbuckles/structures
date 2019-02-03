@@ -1,13 +1,34 @@
 # Data Structures
 
-> Experiments in javascript data structures.
+> A study / experiments in javascript data structures.
 
+## Currently Implemented
 * Stack
 * Queue
 * (linked) List
 * Binary Search Tree
 
 Trying to implement them kinda functional-like and stuff. You know, for learnin'.
+
+## Todo 
+
+* [ ] generalized tree
+* [ ] balanced binary search tree
+* [ ] directed graph
+* [ ] binary decision diagram
+* [ ] priority queue
+* [ ] sets (maybe to js specification)
+* [ ] maps (maybe to js specification)
+* [ ] implement standard js array function in all data structures
+  * [ ] `each` / `forEach`
+  * [ ] `map`
+  * [ ] `reduce`
+  * [ ] `includes`
+  * [ ] `find`
+  * [ ] `some`
+  * [ ] `every`
+* [ ] cleanup spec files, move into own directory (separate so implementation can be blanked for TDD exercises)
+* [ ] READMEs for each data structure
 
 ## Research
 
