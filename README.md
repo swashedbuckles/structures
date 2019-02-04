@@ -7,6 +7,7 @@
 * Queue
 * (linked) List
 * Binary Search Tree
+* Trie
 
 Trying to implement them kinda functional-like and stuff. You know, for learnin'.
 
@@ -17,6 +18,7 @@ Trying to implement them kinda functional-like and stuff. You know, for learnin'
 * [ ] directed graph
 * [ ] binary decision diagram
 * [x] priority queue
+* [x] trie
 * [ ] sets (maybe to js specification)
 * [ ] maps (maybe to js specification)
 * [ ] implement standard js array function in all data structures
@@ -57,3 +59,6 @@ Trying to implement them kinda functional-like and stuff. You know, for learnin'
 * Graph
   * [Graph in JS](https://www.geeksforgeeks.org/implementation-graph-javascript/)
   * [Digraphe](https://github.com/HQarroum/directed-graph)
+* Trie
+  * [DS in JS](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/trie)
+  * [Trie Data Structure (video)](https://www.youtube.com/watch?v=CX777rfuZtM)
