@@ -45,7 +45,36 @@ describe('a trie', it => {
     t.false(trie.find('taco'));
   });
 
-  it.todo('should remove a word when the last node has children');
-  it.todo('should remove a word when characters other than the last have children');
-  it.todo('should remove a word when no characters have children');
+  it('should (not) remove a word when the last node has children', t => {
+    const trie = new Trie();
+    trie.insert('hi');
+    trie.insert('hit');
+    trie.insert('hello');
+    trie.remove('hi');
+    
+    t.true(trie.find('hit'));
+    t.true(trie.find('hello'));
+    t.true(trie.find('hi'));
+  });
+
+  it('should remove a word when characters other than the last have children', t => {
+    const trie = new Trie();
+    trie.insert('robotic');
+    trie.insert('robust');
+    trie.insert('rose');
+    trie.remove('robotic');
+    
+    t.true(trie.find('robust'));
+    t.true(trie.find('rose'));
+    t.false(trie.find('robotic'));
+  });
+
+  it('should remove a word when no characters have children', t => {
+    const trie = new Trie();
+    trie.insert('dracula');
+    trie.insert('wolfman');
+    trie.remove('wolfman');
+    t.true(trie.find('dracula'));
+    t.false(trie.find('wolfman'));
+  });
 });
