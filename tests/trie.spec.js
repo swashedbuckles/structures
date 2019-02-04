@@ -41,8 +41,8 @@ describe('a trie', it => {
   it('should have a find method to return if a word is in the trie', t => {
     const trie = new Trie();
     trie.insert('triangle');
-    t.true(trie.find('triangle'));
-    t.false(trie.find('taco'));
+    t.true(trie.contains('triangle'));
+    t.false(trie.contains('taco'));
   });
 
   it('should (not) remove a word when the last node has children', t => {
@@ -52,10 +52,20 @@ describe('a trie', it => {
     trie.insert('hello');
     trie.remove('hi');
     
-    t.true(trie.find('hit'));
-    t.true(trie.find('hello'));
-    t.true(trie.find('hi'));
+    t.true(trie.contains('hit'));
+    t.true(trie.contains('hello'));
+    t.false(trie.contains('hi'));
   });
+
+  it('should remove phil only after philadelphia', t => {
+    const trie = new Trie();
+    trie.insert('phil');
+    trie.insert('philadelphia');
+    trie.remove('phil');
+    t.true(trie.contains('philadelphia'));
+    trie.remove('philadelphia');
+    t.false(trie.contains('philadelphia'));
+  })
 
   it('should remove a word when characters other than the last have children', t => {
     const trie = new Trie();
@@ -64,9 +74,9 @@ describe('a trie', it => {
     trie.insert('rose');
     trie.remove('robotic');
     
-    t.true(trie.find('robust'));
-    t.true(trie.find('rose'));
-    t.false(trie.find('robotic'));
+    t.true(trie.contains('robust'));
+    t.true(trie.contains('rose'));
+    t.false(trie.contains('robotic'));
   });
 
   it('should remove a word when no characters have children', t => {
@@ -74,7 +84,7 @@ describe('a trie', it => {
     trie.insert('dracula');
     trie.insert('wolfman');
     trie.remove('wolfman');
-    t.true(trie.find('dracula'));
-    t.false(trie.find('wolfman'));
+    t.true(trie.contains('dracula'));
+    t.false(trie.contains('wolfman'));
   });
 });
