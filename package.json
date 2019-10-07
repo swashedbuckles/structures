@@ -18,8 +18,8 @@
   },
   "ava": {
     "verbose": true,
-		"require": [
-			"esm"
-		]
-	}
+    "require": [
+      "esm"
+    ]
+  }
 }
