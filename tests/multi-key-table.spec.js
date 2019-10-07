@@ -59,28 +59,29 @@ describe('Multi-Key Table', it => {
       t.is(vals[1], v2);
     });
 
-    it.skip('should be able to remove an entry from a key', t => {
+    it('should be able to remove an entry from a key', t => {
       const x = new Table();
-      const key = 'key';
+      const key   = 'key';
       const value = 'value';
-      const rm = 'remove';
-      x.set(key, [value, rm]);
+      const rm    = 'remove';
       
+      x.set(key, [value, rm]);
+
       t.deepEqual(x.get(key), [value, rm]);
       x.remove(key, rm);
       t.deepEqual(x.get(key), [value]);
     });
     
-    it.skip('should be able to remove all entries from a key', t => {
+    it('should be able to remove all entries from a key', t => {
       const x = new Table();
       const key = 'key';
       x.set(key, [1, 2, 3, 4, 5]);
       t.is(x.get(key).length, 5);
       x.clear(key);
-      t.is(x.get(key), undefined);
+      t.deepEqual(x.get(key), []);
     });
     
-    it.skip('should be able to replace entries from a key', t => {
+    it('should be able to replace entries from a key', t => {
       const x = new Table();
       const key = 'key';
       const v1 = [1,2,3,4,5];
@@ -134,13 +135,22 @@ describe('Multi-Key Table', it => {
       t.deepEqual(x.get(['k1', 'k2']), ['val']);
     });
 
-    it.skip('should replace only common values', t => {
+    it('should replace only common values', t => {
       const x = new Table();
       x.set(['k1', 'k2'], 'val');
       x.set('k1', 'x');
       x.set('k2', 'y');
       x.replace(['k1', 'k2'], 'value');
       t.deepEqual(x.get(['k1', 'k2']), ['value']);
+
+      const y = new Table();
+      y.set(['k1', 'k2'], 'val');
+      y.set('k1', 'x');
+      y.set('k2', 'y');
+      y.replace(['k1'], 'z');
+
+      t.deepEqual(y.get('k1'), ['val', 'z']);
+      t.deepEqual(y.get('k2'), ['val', 'y']);
     });
   });
 });
