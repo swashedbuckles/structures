@@ -19,8 +19,8 @@ Trying to implement them kinda functional-like and stuff. You know, for learnin'
 * [ ] binary decision diagram
 * [x] priority queue
 * [x] trie
-* [ ] sets (maybe to js specification)
-* [ ] maps (maybe to js specification)
+* [x] sets (maybe to js specification)
+* [x] maps (maybe to js specification)
 * [ ] implement standard js array function in all data structures
   * [ ] `each` / `forEach`
   * [ ] `map`
