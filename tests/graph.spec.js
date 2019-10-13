@@ -69,12 +69,20 @@ describe('Graph', it => {
     t.is(e, y);
   });
 
+  it('should be able to remove nodes', t => {
+    const x = new Graph();
+    const a = x.addNode('a');
+    const b = x.addNode('b');
+
+    t.true(x.getNode('a') != null);
+    x.removeNode('a');
+    t.false(x.getNode('a') != null);
+  });
+
   it.todo('should associated edges with their connecting nodes');
   it.todo('should ignore adding an existing edge');
   it.todo('should find all edges connected to a node on an undirected graph')
   it.todo('should find all edges connected to a node on a directed graph')
-  it.todo('should find neighbors of a node');
-  it.todo('should be able to remove nodes');
   it.todo('should remove all edges associated with a node, when removing the node');
   it.todo('should be able to remove edges');
 });
