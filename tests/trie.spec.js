@@ -1,5 +1,5 @@
 import {describe} from 'ava-spec';
-import {default as Trie, TrieNode} from '../lib/trie';
+import {default as Trie, TrieNode} from '../lib/trees/trie';
 
 describe('a trie', it => {
   it('should be a constructor', t => {

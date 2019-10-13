@@ -1,5 +1,5 @@
 import {describe} from 'ava-spec';
-import Queue from '../lib/priority-queue';
+import Queue from '../lib/lists/priority-queue';
 describe('Priority Queues', it => {
   it('should be a constructor', t => {
     t.is(typeof Queue, 'function');

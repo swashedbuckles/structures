@@ -1,6 +1,6 @@
 import {describe} from 'ava-spec';
-import List from '../lib/list';
-import {ListNode} from '../lib/list';
+import List from '../lib/lists/list';
+import {ListNode} from '../lib/lists/list';
 
 describe('Linked List', it => {
   it('should be a class', t => {

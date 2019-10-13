@@ -1,5 +1,5 @@
 {
-  "include": ["lib/*.js"],
+  "include": ["lib/*.js", "lib/**/*.js"],
   "exclude": [
     "lib.dom.d.ts",
     "node_modules"

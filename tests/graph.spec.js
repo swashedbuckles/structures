@@ -1,5 +1,5 @@
 import {describe} from 'ava-spec';
-import Graph from '../lib/graph';
+import Graph from '../lib/graphs/graph';
 
 describe('Graph construction', it => {
   it('should default to a directed graph', t => {

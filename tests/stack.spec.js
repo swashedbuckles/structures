@@ -1,5 +1,5 @@
 import {describe} from 'ava-spec';
-import Stack from '../lib/stack';
+import Stack from '../lib/lists/stack';
 describe('Stacks', it => {
   it('should be a constructor', t => {
     t.is(typeof Stack, 'function');

@@ -1,5 +1,5 @@
 import {describe} from 'ava-spec';
-import {N, default as BST} from '../lib/binary-search-tree';
+import {N, default as BST} from '../lib/trees/binary-search-tree';
 
 function createTree(arr) {
   const b = new BST()
