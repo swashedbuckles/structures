@@ -1,4 +1,4 @@
-import BST from './lib/binary-search-tree';
+import BST from '../lib/trees/binary-search-tree';
 function createTree(arr) {
   const b = new BST()
   arr.forEach(x => b.insert(x));
