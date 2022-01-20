@@ -214,3 +214,98 @@ console.log(max.heap);
 
 max.remove();
 console.log(max.heap);
+
+class Heap {
+  constructor(maxSize = Infinity) {
+    this.size = 0;
+    this.maxSize = maxSize;
+    this.heap = [];
+  }
+
+  parent(index) { 
+    return Math.floor(index / 2);
+  }
+
+  leftChild(index) {
+    return index * 2
+  }
+
+  rightChild(index) {
+    return index * 2 + 1;
+  }
+
+  heapifyUp(index) {
+    while(index > 0 && this.heap[this.parent(index)] < this.heap[index]) {
+      const parentIndex = this.parent(index);
+      const temp = this.heap[parentIndex];
+      
+      this.heap[parentIndex] = this.heap[index];
+      this.heap[index] = temp;
+      
+      index = parentIndex;
+    }
+  }
+
+  heapifyDown(index) {
+    let maxIndex = index;
+    let left = this.leftChild(index);
+    let right = this.rightChild(index);
+
+    if(left <= this.size && this.heap[left] > this.heap[maxIndex]) {
+      maxIndex = left;
+    }
+
+    if(right <= this.size && this.H[right] > this.heap[maxIndex]) {
+      maxIndex = right;
+    }
+
+    if(index !== maxIndex) {
+      const temp = this.heap[index];
+      this.heap[index] = this.heap[maxIndex];
+      this.heap[maxIndex] = temp;
+      this.heapifyDown(maxIndex);
+    }
+  }
+
+  insert(value) {
+    if(this.size !== this.maxSize) {
+      this.heap[this.size] = value;
+      this.heapifyUp(this.size);
+      this.size++;
+    }
+  }
+
+  getMax() {
+    return this.heap[0];
+  }
+
+  getSize() {
+    return this.size;
+  }
+
+  extractMax() {
+    const result = this.getMax();
+    this.heap[0] = this.heap[this.size - 1];
+    this.heap.pop();
+    this.size--;
+    this.heapifyDown(0);
+
+    return result;
+  }
+
+  remove(index) {
+    this.heap[index] = Infinity;
+    this.heapifyUp(index);
+    history.extractMax();
+  }
+
+  changeValue(index, value) {
+    const old = this.heap[index];
+    this.heap[index] = value;
+    if(value > old) {
+      this.heapifyUp(index);
+    } else {
+      this.heapifyDown(index);
+    }
+  }
+}

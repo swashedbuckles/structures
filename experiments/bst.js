@@ -40,7 +40,7 @@ class BST {
         addNode(value, node.left);
       } 
 
-      if(value > node.value && !node.right) {
+      if(value > node.value && !node.right)  {
         console.log('value larger, insert');
         node.right = new BstNode(value);
       } else if (value > node.value && node.right !== null) {
